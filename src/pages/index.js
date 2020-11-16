@@ -7,16 +7,16 @@ import {
 } from 'components';
 import ProductContext from 'context/ProductContext';
 import {Footer} from '../components/Footer';
-import {DiscussionEmbed} from 'disqus-react'
-import {  useLocation } from '@reach/router';
+// import {DiscussionEmbed} from 'disqus-react'
+// import {  useLocation } from '@reach/router';
 
 const IndexPage = () => {
-  const {  origin } = useLocation();
+  // const {  origin } = useLocation();
   const { collections } = React.useContext(ProductContext);
- const baseUrl = `${origin}`;
- const disqusConfig ={
-   url : baseUrl
- }
+//  const baseUrl = `${origin}`;
+//  const disqusConfig ={
+//    url : baseUrl
+//  }
  const disqusShortname = "moroccansaffron-com-2"
   return (
     <Layout>
@@ -33,7 +33,7 @@ const IndexPage = () => {
       ) && <FeaturedProducts />}
        
 
-      <DiscussionEmbed shortname = {disqusShortname} config ={disqusConfig} />
+      {/* <DiscussionEmbed shortname = {disqusShortname} config ={disqusConfig} /> */}
       <Footer/>
     </Layout>
 
