@@ -8,10 +8,10 @@ import {
 import ProductContext from 'context/ProductContext';
 import {Footer} from '../components/Footer';
 import {DiscussionEmbed} from 'disqus-react'
-
+import {  useLocation } from '@reach/router';
 
 const IndexPage = () => {
-
+  const {  origin } = useLocation();
   const { collections } = React.useContext(ProductContext);
  const baseUrl = `${origin}`;
  const disqusConfig ={
