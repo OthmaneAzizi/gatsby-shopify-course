@@ -1,9 +1,8 @@
 import React from 'react';
 import {FooterWrapper, List , ListItem} from './styles';
-import {Cart} from '../Cart';
-import {Search} from '../Search'
+
 import {Link} from 'gatsby'
-import {Logo} from '../Logo'
+
 export function Footer(){
     return <FooterWrapper>
 <List>
@@ -19,12 +18,12 @@ export function Footer(){
   </ListItem>
   <ListItem>
   <Link to = '/warranty-guarantees'>
-        Warranty Policy and Guarantees
+        Warranty
       </Link>
   </ListItem>
   <ListItem>
   <Link to = '/returns-refunds-policy'>
-        Returns and Refunds Policy
+        Refund Policy
       </Link>
   </ListItem>
 </List>
