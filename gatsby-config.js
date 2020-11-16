@@ -13,7 +13,7 @@ module.exports = {
     `gatsby-plugin-remove-fingerprints`,
     `gatsby-plugin-styled-components`,
     `gatsby-optional-chaining`,
-     `gatsby-plugin-firebase`,
+   
     `gatsby-theme-comments`,
     {
       resolve: `gatsby-plugin-google-fonts`,
