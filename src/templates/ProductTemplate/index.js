@@ -23,7 +23,7 @@ export const query = graphql`
 
 export default function ProductTemplate(props) {
   const { search, origin, pathname } = useLocation();
-
+  const variantId = queryString.parse(search).variant;
   const baseUrl = `${origin}${pathname}?variant=${encodeURIComponent(variantId)}`
   const disqusConfig ={
     url : baseUrl
@@ -33,7 +33,7 @@ export default function ProductTemplate(props) {
   const [product, setProduct] = React.useState(null);
   const [selectedVariant, setSelectedVariant] = React.useState(null);
   
-  const variantId = queryString.parse(search).variant;
+  
   
   React.useEffect(() => {
     getProductById(props.data.shopifyProduct.shopifyId).then(result => {
