@@ -15,6 +15,12 @@ export const List = styled.ul`
   overflow-x: auto;
   margin-top : 70px;
   margin-left : 30px;
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+ 
+  box-sizing: border-box;
+  flex-wrap: wrap;
 `;
 export const ListItem = styled.li`
   display: inline-block;

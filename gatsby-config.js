@@ -1,17 +1,20 @@
 require('dotenv').config({
   path: `.env`,
 });
+require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
     title: `MadHatter Store`,
     description: `We're mad about hats`,
-    author: `@tomphill`,
+    author: `@OthmaneAzizi`,
   },
   plugins: [
     `gatsby-plugin-remove-fingerprints`,
     `gatsby-plugin-styled-components`,
     `gatsby-optional-chaining`,
+     `gatsby-plugin-firebase`,
+    `gatsby-theme-comments`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
@@ -24,6 +27,12 @@ module.exports = {
           'open sans:800i',
         ],
       },
+    },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `moroccansaffron-com-2`
+      }
     },
     {
       resolve: 'gatsby-source-shopify',

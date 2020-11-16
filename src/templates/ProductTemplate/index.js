@@ -12,7 +12,7 @@ import { Grid, SelectWrapper, Price } from './styles';
 import CartContext from 'context/CartContext';
 import { navigate, useLocation } from '@reach/router';
 import queryString from 'query-string';
-
+import {DiscussionEmbed} from 'disqus-react'
 export const query = graphql`
   query ProductQuery($shopifyId: String) {
     shopifyProduct(shopifyId: { eq: $shopifyId }) {
@@ -22,12 +22,17 @@ export const query = graphql`
 `;
 
 export default function ProductTemplate(props) {
+  
+  const disqusConfig ={
+    url : baseUrl
+  }
+  const disqusShortname = "moroccansaffron-com-2"
   const { getProductById } = React.useContext(CartContext);
   const [product, setProduct] = React.useState(null);
   const [selectedVariant, setSelectedVariant] = React.useState(null);
   const { search, origin, pathname } = useLocation();
   const variantId = queryString.parse(search).variant;
-
+  const baseUrl = `${origin}${pathname}?variant=${encodeURIComponent(variantId)}`
   React.useEffect(() => {
     getProductById(props.data.shopifyProduct.shopifyId).then(result => {
       setProduct(result);
@@ -100,6 +105,7 @@ export default function ProductTemplate(props) {
           />
         </div>
       </Grid>
+      <DiscussionEmbed shortname = {disqusShortname} config ={disqusConfig} />
     </Layout>
   );
 }
