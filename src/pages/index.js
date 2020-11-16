@@ -11,6 +11,7 @@ import {DiscussionEmbed} from 'disqus-react'
 import { navigate, useLocation } from '@reach/router';
 
 const IndexPage = () => {
+  const { search, origin, pathname } = useLocation();
   const { collections } = React.useContext(ProductContext);
  const baseUrl = `${origin}`;
  const disqusConfig ={

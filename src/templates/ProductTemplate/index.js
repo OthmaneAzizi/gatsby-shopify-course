@@ -22,7 +22,9 @@ export const query = graphql`
 `;
 
 export default function ProductTemplate(props) {
-  
+  const { search, origin, pathname } = useLocation();
+
+  const baseUrl = `${origin}${pathname}?variant=${encodeURIComponent(variantId)}`
   const disqusConfig ={
     url : baseUrl
   }
@@ -30,9 +32,9 @@ export default function ProductTemplate(props) {
   const { getProductById } = React.useContext(CartContext);
   const [product, setProduct] = React.useState(null);
   const [selectedVariant, setSelectedVariant] = React.useState(null);
-  const { search, origin, pathname } = useLocation();
+  
   const variantId = queryString.parse(search).variant;
-  const baseUrl = `${origin}${pathname}?variant=${encodeURIComponent(variantId)}`
+  
   React.useEffect(() => {
     getProductById(props.data.shopifyProduct.shopifyId).then(result => {
       setProduct(result);
