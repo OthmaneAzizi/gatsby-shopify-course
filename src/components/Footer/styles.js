@@ -9,9 +9,6 @@ padding : 10px 20px;
 margin-left:10%;
 box-sizing : border-box;
 flex-wrap : wrap;
-
-
-
 `;
 
 export const List = styled.ul`
