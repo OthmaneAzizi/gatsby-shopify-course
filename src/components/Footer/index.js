@@ -1,31 +1,28 @@
+
 import React from 'react';
-import {FooterWrapper, List , ListItem} from './styles';
+import { Container, Wrapper, Row, Column, Link, Title } from './styles';
 
-import {Link} from 'gatsby'
-
-export function Footer(){
-    return <FooterWrapper>
-<List>
-  <ListItem>
-      <Link to = '/terms-of-use'>
-        Terms of Use
-      </Link>
-  </ListItem>
-  <ListItem>
-  <Link to = '/privacy-policy'>
-        Privacy Policy
-      </Link>
-  </ListItem>
-  <ListItem>
-  <Link to = '/warranty-guarantees'>
-        Warranty
-      </Link>
-  </ListItem>
-  <ListItem>
-  <Link to = '/returns-refunds-policy'>
-        Refund Policy
-      </Link>
-  </ListItem>
-</List>
-       </FooterWrapper>
+export default function Footer({ children, ...restProps }) {
+  return <Container {...restProps}>{children}</Container>;
 }
+
+Footer.Wrapper = function FooterWrapper({children, ...restProps}) {
+  return <Wrapper {...restProps}>{children}</Wrapper>
+}
+
+Footer.Row = function FooterRow({ children, ...restProps }) {
+  return <Row {...restProps}>{children}</Row>;
+};
+
+Footer.Column = function FooterColumn({ children, ...restProps }) {
+  return <Column {...restProps}>{children}</Column>;
+};
+
+Footer.Link = function FooterLink({ children, ...restProps }) {
+  return <Link {...restProps}>{children}</Link>;
+};
+
+Footer.Title = function FooterTitle({ children, ...restProps }) {
+  return <Title {...restProps}>{children}</Title>;
+};
+

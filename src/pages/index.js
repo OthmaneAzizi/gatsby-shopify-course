@@ -6,7 +6,7 @@ import {
   FeaturedProducts,
 } from 'components';
 import ProductContext from 'context/ProductContext';
-import {Footer} from '../components/Footer';
+import { FooterContainer } from '../containers/footer'
 // import {DiscussionEmbed} from 'disqus-react'
 // import {  useLocation } from '@reach/router';
 
@@ -17,10 +17,11 @@ const IndexPage = () => {
 //  const disqusConfig ={
 //    url : baseUrl
 //  }
- const disqusShortname = "moroccansaffron-com-2"
+
   return (
+    <>
     <Layout>
-      <SEO description="The MadHatter store homepage" title="Homepage" />
+      <SEO description="Morrocan saffron Home page" title="Homepage" />
       <HomepageCollectionsGrid
         collections={
           collections.filter(
@@ -34,8 +35,10 @@ const IndexPage = () => {
        
 
       {/* <DiscussionEmbed shortname = {disqusShortname} config ={disqusConfig} /> */}
-      <Footer/>
+     
     </Layout>
+    <FooterContainer/>
+    </>
 
   );
 };

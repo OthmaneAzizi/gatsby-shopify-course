@@ -64,5 +64,16 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `open sans`,
+            variants: [`400i`, `400`, `700`,`700i`,`800`,`800i`],
+          },
+        ],
+      },
+    },
   ],
 };
