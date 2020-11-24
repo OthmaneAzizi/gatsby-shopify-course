@@ -15,6 +15,7 @@ const WarrantyGuarantees = () => (
 <p>
     The saffron we provide respect high standard of quality , Moroccan saffron of Tiliwin is recognized to be the king of saffron
 </p>
+<br/>
 <strong>Shipping</strong>
 <p>
 Our products are shipped from the farm of origin straight through to the Essential Spice storage facilities and then shipped directly to you
