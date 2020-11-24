@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Container, Wrapper, Row, Column, Link, Title } from './styles';
 

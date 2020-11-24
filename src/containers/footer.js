@@ -1,6 +1,5 @@
 import React from 'react'
-import Footer from '../components/footer'
-import Icon from '../components/icons'
+import Footer from '../components/Footer'
 import { FaFacebook } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 import { FaYoutube } from 'react-icons/fa';
