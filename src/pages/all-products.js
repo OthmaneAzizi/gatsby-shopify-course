@@ -64,7 +64,7 @@ export default function AllProducts() {
   return (
     <Layout>
       <SEO
-        description="The MadHatter store all products"
+        description="Moroccan saffron store all products"
         title="All products"
       />
       {!!searchTerm && !!filteredProducts.length && (

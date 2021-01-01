@@ -30,7 +30,7 @@ export function FooterContainer() {
                 </Footer.Column>
                 <Footer.Column>
                 <Footer.Title>Services</Footer.Title>
-                    <Footer.Link><StyledLink to ="/privacy-policy">COVID-19</StyledLink></Footer.Link>
+                    <Footer.Link><StyledLink to ="/covid-19">COVID-19</StyledLink></Footer.Link>
                     <Footer.Link><StyledLink to ="/FAQ">FAQ</StyledLink></Footer.Link>
                   
                 </Footer.Column>

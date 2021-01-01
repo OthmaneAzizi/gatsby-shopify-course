@@ -21,7 +21,7 @@ export function ImageGallery({ selectedVariantImageId, images }) {
   return (
     <ImageGalleryWrapper>
       <div>
-        <Image fluid={activeImageThumbnail.localFile.childImageSharp.fluid} />
+        <Image fluid={activeImageThumbnail?.localFile?.childImageSharp?.fluid} />
       </div>
       <div>
         {images.map(image => {

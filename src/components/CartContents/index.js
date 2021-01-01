@@ -32,11 +32,11 @@ export function CartContents() {
               {item.variant.title === 'Default Title' ? '' : item.variant.title}
             </div>
           </div>
-          <div>£{item.variant.price}</div>
+          <div>${item.variant.price}</div>
           <div>
             <QuantityAdjuster item={item} onAdjust={handleAdjustQuantity} />
           </div>
-          <div>£{(item.quantity * item.variant.price).toFixed(2)}</div>
+          <div>${(item.quantity * item.variant.price).toFixed(2)}</div>
           <div>
             <RemoveLineItem lineItemId={item.id} />
           </div>
@@ -48,7 +48,7 @@ export function CartContents() {
             <strong>Total:</strong>
           </div>
           <div>
-            <span>£{checkout?.totalPrice}</span>
+            <span>${checkout?.totalPrice}</span>
           </div>
         </CartFooter>
       )}

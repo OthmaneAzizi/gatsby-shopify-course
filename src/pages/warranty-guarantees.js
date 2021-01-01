@@ -13,7 +13,7 @@ const WarrantyGuarantees = () => (
     <h1>Warranty Guarantees</h1>
 <strong>Authentic</strong>
 <p>
-    The saffron we provide respect high standard of quality , Moroccan saffron of Tiliwin is recognized to be the king of saffron
+    The caps we provide respect high standard of quality ,Our hat collection is entirely tested by our experts
 </p>
 <br/>
 <strong>Shipping</strong>
@@ -37,7 +37,7 @@ The United States Postal Service (USPS) is struggling with increased package vol
     Just want to try ? We propose all quantities 
 </p>
 <p>
-All of our products are sold in quantities that support large manufacturers and restaurant operations all the way down to small independent restaurants, bakeries, and the home based gourmet cook
+All of our products are sold in quantities that support large manufacturers as well as personal needs
 </p>
   </Layout>
 );

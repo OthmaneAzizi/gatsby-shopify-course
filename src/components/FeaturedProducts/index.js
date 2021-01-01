@@ -8,10 +8,11 @@ export function FeaturedProducts() {
   const featuredCollection = collections.find(
     collection => collection.title === 'Featured Hats'
   );
+  console.log(collections);
 
   return (
     <section>
-      <h1>Featured hats</h1>
+      <h1>Featured Caps</h1>
       <ProductsGrid products={featuredCollection.products} />
     </section>
   );

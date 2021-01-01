@@ -4,10 +4,10 @@ import { RemainingCollections } from './styles';
 
 export function HomepageCollectionsGrid({ collections }) {
   const saleCollection = collections?.find(
-    collection => collection.title === 'SALE'
+    collection => collection.title === 'ON SALE'
   );
   const remainingCollections = collections?.filter(
-    collection => collection.title !== 'SALE'
+    collection => collection.title.includes('Hats') && collection.title !== 'Featured Hats'
   );
 
   return (
@@ -20,7 +20,7 @@ export function HomepageCollectionsGrid({ collections }) {
           )}`}
           title={saleCollection.title}
           description={saleCollection.description}
-          backgroundImage={saleCollection.image.localFile.childImageSharp.fluid}
+          backgroundImage={saleCollection?.image?.localFile?.childImageSharp?.fluid}
         />
       )}
       <RemainingCollections>
@@ -31,7 +31,7 @@ export function HomepageCollectionsGrid({ collections }) {
             )}`}
             title={collection.title}
             description={collection.description}
-            backgroundImage={collection.image.localFile.childImageSharp.fluid}
+            backgroundImage={collection.image?.localFile.childImageSharp.fluid}
             key={collection.shopifyId}
           />
         ))}
