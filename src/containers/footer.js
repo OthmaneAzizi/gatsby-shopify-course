@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from '../components/Footer'
 import { FaFacebook } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
-import { FaYoutube } from 'react-icons/fa';
+import { FaYoutube  } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
 import {Link} from 'gatsby'
 import styled from 'styled-components';
